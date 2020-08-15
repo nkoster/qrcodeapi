@@ -24,5 +24,5 @@ app.get('/:data', async (req, res) => {
 })
 
 http.listen(httpPort, _ => {
-    console.log(`geoip listening on port \u001b[33m${httpPort}\u001b[39m`)
+    console.log(`qrcodeapi listening on port \u001b[33m${httpPort}\u001b[39m`)
 })
