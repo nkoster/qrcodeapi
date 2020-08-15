@@ -16,7 +16,9 @@ npm i
 node start
 ```
 
-### Usage example with ```curl```
+### Example
+
+An example with ```curl```.
 
 ```
 curl localhost:10000/example.com
