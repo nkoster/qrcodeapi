@@ -7,7 +7,16 @@ This is a too simple example of an API that receives a string and returns a JSON
 }
  ```
 
-Example:
+Install:
+
+```
+git clone https://github.com/nkoster/qrcodeapi
+cd qrcodeapi
+npm i
+node start
+```
+
+Usage example with ```curl```:
 
 ```
 curl localhost:10000/example.com
