@@ -4,23 +4,13 @@ const
     httpPort = 10000,
     { exec } = require('child_process'),
     execute = (command, callback) => {
-        exec(command, (error, stdout, stderr) => { callback(stdout) })
+        exec(command, (_, stdout) => callback(stdout))
     }
 
 app.get('/:data', (req, res) => {
-    console.log(
-        new Date().toISOString(),
-        req.headers['x-forwarded-for'] || req.connection.remoteAddress,
-        req.params.data
-    )
     res.setHeader('Content-Type', 'application/json')
-    execute(
-        `echo -n "https://${req.params.data}" | qrencode -s 3 -o - --type=png --foreground=000000 --background=FFFFFF | base64 -w0`,
-        qrcode => {
-        res.end(JSON.stringify({
-            qrcode
-        }))
-    })
+    const cmd = `echo -n "https://${req.params.data}" | qrencode -s 3 -o - --type=png --foreground=000000 --background=FFFFFF | base64 -w0`
+    execute(cmd, qrcode => res.end(JSON.stringify({ qrcode })))
 })
 
 http.listen(httpPort, _ => {
