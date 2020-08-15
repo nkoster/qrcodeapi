@@ -7,7 +7,7 @@ const
         exec(command, (error, stdout, stderr) => { callback(stdout) })
     }
 
-app.get('/:data', async (req, res) => {
+app.get('/:data', (req, res) => {
     console.log(
         new Date().toISOString(),
         req.headers['x-forwarded-for'] || req.connection.remoteAddress,
