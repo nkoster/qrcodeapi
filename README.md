@@ -7,7 +7,7 @@ This is a too simple example of an API that receives a string and returns a JSON
 }
  ```
 
-Install:
+### Install
 
 ```
 git clone https://github.com/nkoster/qrcodeapi
@@ -16,7 +16,7 @@ npm i
 node start
 ```
 
-Usage example with ```curl```:
+### Usage example with ```curl```
 
 ```
 curl localhost:10000/example.com
@@ -25,7 +25,8 @@ curl localhost:10000/example.com
 This example with ```curl``` returns a JSON object, that contains a base64 encoded PNG, that contains a QR code,
 that contains a string "https://example.com", all in less than 20 lines of JS with nodejs.
 
-Dependencies:
+### Dependencies
+
 ```
 apt install qrencode
 ```
