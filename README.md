@@ -7,6 +7,12 @@ This is a _too simple_ example of an API, that receives a string, and returns a 
 }
  ```
 
+### Dependencies
+
+```
+apt install qrencode
+```
+
 ### Install
 
 ```
@@ -28,9 +34,3 @@ This returns a JSON object, that contains a base64 encoded PNG, that contains a 
 that contains a string "https://example.com".
 
 Notice, the server program is less than 20 lines of JS.
-
-### Dependencies
-
-```
-apt install qrencode
-```
