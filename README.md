@@ -16,7 +16,7 @@ curl localhost:10000/example.com
 This example with ```curl``` returns a JSON object, that contains a base64 encoded PNG, that contains a QR code,
 that contains a string "https://example.com", all in less than 20 lines of JS code with nodejs.
 
-The "https://" string is inserted in the response.
+The "https://" string is inserted in the response, it's all very basic.
 
 Dependencies:
 ```
