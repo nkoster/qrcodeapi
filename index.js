@@ -3,10 +3,8 @@ const
     http = require('http').createServer(app),
     httpPort = 10000,
     { exec } = require('child_process'),
-    execute = (command, callback) => {
-        exec(command, (_, stdout) => callback(stdout))
-    }
-
+    execute = (command, callback) => exec(command, (_, stdout) => callback(stdout))
+    
 app.get('/:data', (req, res) => {
     res.setHeader('Content-Type', 'application/json')
     const cmd = `echo -n "https://${req.params.data}" | qrencode -s 3 -o - --type=png --foreground=000000 --background=FFFFFF | base64 -w0`
