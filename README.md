@@ -1,5 +1,5 @@
 
-This is a too simple example of an API, that receives a string, and returns a QRcode as base64 encoded PNG, in a JSON response.
+This is a too simple example of an API, that receives a string, and returns a QRcode as base64 encoded PNG, in a JSON response, like:
 
 ```
 {
