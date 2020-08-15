@@ -14,9 +14,11 @@ app.get('/:data', async (req, res) => {
         req.params.data
     )
     res.setHeader('Content-Type', 'application/json')
-    execute('echo aap | qrencode -s 3 -o - --type=png --foreground=000000 --background=FFFFFF', data => {
+    execute(
+        `echo -n "https://${req.params.data}" | qrencode -s 3 -o - --type=png --foreground=000000 --background=FFFFFF | base64 -w0`,
+        qrcode => {
         res.end(JSON.stringify({
-            data: data
+            qrcode
         }))
     })
 })
