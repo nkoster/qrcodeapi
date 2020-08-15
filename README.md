@@ -3,7 +3,7 @@ This is a _too simple_ example of an API, that receives a string, and returns a 
 
 ```
 {
-  "qrqode": "<base64>"
+  "qrcode": "<base64>"
 }
  ```
 
