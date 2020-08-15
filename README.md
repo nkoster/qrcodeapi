@@ -18,7 +18,7 @@ node start
 
 ### Example
 
-An example with ```curl```.
+An example with ```curl```
 
 ```
 curl localhost:10000/example.com
