@@ -1,5 +1,5 @@
 
-This is a too simple example of an API that receives a string and returns a JSON in the follwoing format:
+This is a too simple example of an API that receives a string and returns a JSON in the following format:
 
 ```
 {
