@@ -13,7 +13,7 @@
         const theText = document.getElementById('theText')
         const theData = document.getElementById('theData')
         const theImage = document.getElementById('theImage')
-        theText.oninput = async evt => {
+        theText.oninput = evt => {
             theData.innerHTML = evt.target.value
             const theTextUri = encodeURIComponent(evt.target.value)
             if (theTextUri) {
