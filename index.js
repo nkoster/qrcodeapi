@@ -7,7 +7,7 @@ const
     
 app.get('/:data', (req, res) => {
     res.setHeader('Content-Type', 'application/json')
-    const cmd = `echo -n "https://${req.params.data}" | qrencode -s 3 -o - --type=png --foreground=000000 --background=FFFFFF | base64 -w0`
+    const cmd = `echo -n "${req.params.data}" | qrencode -s 3 -o - --type=png --foreground=000000 --background=FFFFFF | base64 -w0`
     execute(cmd, qrcode => res.end(JSON.stringify({ qrcode })))
 })
 
