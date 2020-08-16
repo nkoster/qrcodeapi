@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code</title>
+</head>
+<body>
+    <input id="theText">
+    <div id="theData"></div>
+    <img id="theImage">
+    <script>
+        const theText = document.getElementById('theText')
+        const theData = document.getElementById('theData')
+        const theImage = document.getElementById('theImage')
+        theText.oninput = async evt => {
+            theData.innerHTML = evt.target.value
+            const theTextUri = encodeURIComponent(evt.target.value)
+            if (theTextUri) {
+                theImage.style.visibility = 'visible'
+                fetch(`https://qrcodeapi.w3b.net/${theTextUri}`)
+                .then(response => response.json())
+                .then(data => {
+                    const imgData = `data:image/png;base64, ${data.qrcode}`
+                    theImage.src = imgData
+                })
+                .catch(err => console.log(err.message))
+            } else {
+                theImage.style.visibility = 'hidden' 
+            }
+        }
+    </script>
+</body>
+</html>
