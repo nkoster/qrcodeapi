@@ -1,10 +1,13 @@
 const
     app = require('express')(),
     http = require('http').createServer(app),
-    httpPort = 10000,
+    cors = require('cors'),
+    httpPort = 10010,
     { exec } = require('child_process'),
     execute = (command, callback) => exec(command, (_, stdout) => callback(stdout))
-    
+
+app.use(cors())
+
 app.get('/:data', (req, res) => {
     res.setHeader('Content-Type', 'application/json')
     const cmd = `echo -n "${req.params.data}" | qrencode -s 3 -o - --type=png --foreground=000000 --background=FFFFFF | base64 -w0`
