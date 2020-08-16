@@ -34,3 +34,5 @@ This returns a JSON object, that contains a base64 encoded PNG, that holds a QR 
 that contains a string "https://example.com".
 
 Notice, the server program is less than 20 lines of JS.
+
+I've added an HTML file, ```qr.html```, which you can use as an example on how to use the API from within a web page.
