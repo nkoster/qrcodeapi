@@ -37,7 +37,7 @@ For testing, you can easily create a URI with this command:
 ```
 node -e "console.log(encodeURIComponent('https://example.com'))"
 ```
-This creates the string "```https%3A%2F%2Fexample.com```", as used in above ```curl``` example.
+This creates the string ```https%3A%2F%2Fexample.com```, as used in above ```curl``` example.
 
 ### HTML
 
