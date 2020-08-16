@@ -33,7 +33,11 @@ curl localhost:10000/https%3A%2F%2Fexample.com
 This returns a JSON object, that contains a base64 encoded PNG, that presents a QR code,
 that contains a string "example.com".
 
-Notice, the server program is less than 20 lines of JS.
+For testing, you can easily create a URI with this command
+```
+node -e "console.log(encodeURIComponent('https://example.com'))"
+```
+which created the same string as used in above ```curl``` example.
 
 ### HTML
 
