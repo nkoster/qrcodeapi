@@ -13,7 +13,7 @@ Fast async responses, low CPU, and low network impact.
 
 ### Dependencies
 
-These are the external helpers used by the server JavaScript.
+These are the external helpers used by the servers JavaScript.
 
 In my debian based linux:
 
