@@ -27,7 +27,7 @@ node start
 An example with ```curl```
 
 ```
-curl localhost:10000/https%3A%2F%2Fexample.com
+curl localhost:10010/https%3A%2F%2Fexample.com
 ````
 
 returns
