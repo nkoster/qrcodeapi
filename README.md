@@ -54,7 +54,7 @@ For testing, or for script based logic, you can easily create a URI with this co
 node -e "console.log(encodeURIComponent('https://example.com'))"
 ```
 
-This gives the string ```https%3A%2F%2Fexample.com```, like in above ```curl``` example.
+This returns the string ```https%3A%2F%2Fexample.com```, like in above ```curl``` example.
 
 ### HTML
 
