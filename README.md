@@ -7,7 +7,13 @@ This is a _too simple_ example of a "REST API", that receives a string, and retu
 }
  ```
 
+The server code is less than 20 lines Javascript. It uses external helpers for creating the PNG and the conversion to base64.
+Since both external helpers are fast and optimized binaries, the result of this approach is pretty amazing.
+Fast async responses, low CPU, and low network impact.
+
 ### Dependencies
+
+The external helpers used by the server JavaScript.
 
 In my debian based linux:
 
