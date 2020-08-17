@@ -57,7 +57,7 @@ returns
 ```
 
 which is a JSON object, that contains a base64 encoded PNG, that presents a QR code,
-that contains a string "https://example.com".
+that holds a string "https://example.com".
 
 For testing, or for script based logic, you can easily create a URI with this command:
 
