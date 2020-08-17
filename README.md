@@ -12,6 +12,7 @@ This is a _too simple_ example of a "REST API", that receives a string, and retu
 In my debian based linux:
 
 ```apt install qrencode``` for the QR encoder
+
 ```apt install coreutils``` for the program ```base64```
 
 ### Install
