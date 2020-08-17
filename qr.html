@@ -3,12 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        .parent {
+            display: grid;
+            position: fixed;
+            place-items: center;
+            top: 0; left: 0; bottom: 0; right: 0;
+            /* resize: both; */
+            overflow: auto;
+        }
+        .child {
+            padding: 0.5rem;
+            font-size: 2rem;
+            text-align: center;
+        }
+        body {
+            font-family: system-ui, serif;
+        }
+        #theText {
+            width: 400px;
+            text-align: center;
+        }
+    </style>
     <title>QR Code</title>
 </head>
 <body>
-    <input id="theText">
-    <div id="theData"></div>
-    <img id="theImage">
+    <div class="parent">
+        <div class="child">
+            <input id="theText">
+            <div id="theData"></div>
+            <img id="theImage">
+        </div>
+    </div>
     <script>
         const theText = document.getElementById('theText')
         const theData = document.getElementById('theData')
