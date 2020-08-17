@@ -10,7 +10,6 @@
             position: fixed;
             place-items: center;
             top: 0; left: 0; bottom: 0; right: 0;
-            /* resize: both; */
             overflow: auto;
         }
         .child {
@@ -45,7 +44,7 @@
             const theTextUri = encodeURIComponent(evt.target.value)
             if (theTextUri) {
                 theImage.style.visibility = 'visible'
-                fetch(`https://qrcodeapi.w3b.net/${theTextUri}`)
+                fetch(`http://localhost:10010/${theTextUri}`)
                 .then(response => response.json())
                 .then(data => {
                     const imgData = `data:image/png;base64, ${data.qrcode}`
