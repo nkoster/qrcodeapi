@@ -19,8 +19,8 @@ In my debian based linux:
 
 - ```apt install qrencode``` # for the QR encoder
 - ```apt install coreutils``` # for the program ```base64```
-
 - Of course, you also need ```node```.
+
 I recommend to use ```nvm``` to manage your ```node``` installation:
 https://github.com/nvm-sh/nvm
 
