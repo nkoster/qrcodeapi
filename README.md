@@ -19,8 +19,15 @@ apt install qrencode
 git clone https://github.com/nkoster/qrcodeapi
 cd qrcodeapi
 npm i
+```
+
+### Run
+
+```
 node start
 ```
+
+You can now reach the API at localhost port 10010.
 
 ### Example
 
