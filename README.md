@@ -33,7 +33,7 @@ You can now reach the API at localhost port 10010.
 
 ### Example
 
-An example with ```curl```
+An example with ```curl```.
 
 ```
 curl localhost:10010/https%3A%2F%2Fexample.com
