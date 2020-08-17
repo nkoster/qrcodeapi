@@ -48,7 +48,7 @@ returns
 which is a JSON object, that contains a base64 encoded PNG, that presents a QR code,
 that contains a string "https://example.com".
 
-For testing, you can easily create a URI with this command:
+For testing, or for script based logic, you can easily create a URI with this command:
 
 ```
 node -e "console.log(encodeURIComponent('https://example.com'))"
