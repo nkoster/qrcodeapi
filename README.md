@@ -19,7 +19,7 @@ The external helpers, used by the server.
 In my debian based linux:
 
 - ```apt install qrencode``` # for the QR encoder
-- ```apt install coreutils``` # for the program ```base64```
+- ```apt install coreutils``` # for the ```base64``` binary
 - obviously, you also need ```node```
 
 I recommend to use ```nvm``` to manage your ```node``` installation: https://github.com/nvm-sh/nvm
