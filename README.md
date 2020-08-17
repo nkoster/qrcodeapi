@@ -22,7 +22,7 @@ In my debian based linux:
 - obviously, you also need ```node```
 
 I recommend to use ```nvm``` to manage your ```node``` installation: https://github.com/nvm-sh/nvm
-By using ```nvm```, you never have to install global ```npm``` packages as ```root```, which is more secure.
+By using ```nvm```, you never have to install global ```npm``` packages as _root_, which is more secure.
 
 ### Install
 
