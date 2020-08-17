@@ -18,11 +18,22 @@
             text-align: center;
         }
         body {
-            font-family: system-ui, serif;
+            font-family: sans-serif;
         }
         #theText {
-            width: 400px;
+            width: 590px;
             text-align: center;
+            margin-bottom: 40px;
+            height: 50px;
+            font-size: 30px;
+            background-color: rgba(0,0,0, 0.2);
+            border-radius: 5px;
+            border: none;
+        }
+        @media screen and (max-width: 600px) {
+            #theText {
+                width: 300px;
+            }
         }
     </style>
     <title>QR Code</title>
@@ -36,24 +47,29 @@
         </div>
     </div>
     <script>
+        const baseText = 'nothing here!'
         const theText = document.getElementById('theText')
         const theData = document.getElementById('theData')
         const theImage = document.getElementById('theImage')
+        const getQrCode = text => {
+            const uriText = encodeURIComponent(text)
+            theData.innerHTML = text
+            fetch(`http://localhost:10010/${uriText}`)
+            .then(response => response.json())
+            .then(data => {
+                const imgData = `data:image/png;base64, ${data.qrcode}`
+                theImage.src = imgData
+            })
+            .catch(err => console.log(err.message))
+        }
         theText.oninput = evt => {
-            theData.innerHTML = evt.target.value
-            const theTextUri = encodeURIComponent(evt.target.value)
-            if (theTextUri) {
-                theImage.style.visibility = 'visible'
-                fetch(`http://localhost:10010/${theTextUri}`)
-                .then(response => response.json())
-                .then(data => {
-                    const imgData = `data:image/png;base64, ${data.qrcode}`
-                    theImage.src = imgData
-                })
-                .catch(err => console.log(err.message))
-            } else {
-                theImage.style.visibility = 'hidden' 
-            }
+            let text = evt.target.value ? evt.target.value : baseText
+            getQrCode(text)
+        }
+        window.onload = _ => {
+            theText.value = ''
+            getQrCode(baseText)
+            theText.focus()
         }
     </script>
 </body>
