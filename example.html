@@ -62,10 +62,7 @@
             })
             .catch(err => console.log(err.message))
         }
-        theText.oninput = evt => {
-            let text = evt.target.value ? evt.target.value : baseText
-            getQrCode(text)
-        }
+        theText.oninput = evt => getQrCode(evt.target.value ? evt.target.value : baseText)
         window.onload = _ => {
             theText.value = ''
             getQrCode(baseText)
