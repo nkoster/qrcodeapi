@@ -41,4 +41,4 @@ This gives the string ```https%3A%2F%2Fexample.com```, like in above ```curl``` 
 
 ### HTML
 
-I've added an HTML file, ```qr.html```, which you can use as an example on how to use the API from within a web page.
+I've added an HTML file, ```example.html```, which you can use as an example on how to use the API from within a web page.
