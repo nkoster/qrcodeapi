@@ -70,3 +70,7 @@ This returns the string ```https%3A%2F%2Fexample.com```, like in above ```curl``
 ### HTML
 
 I've added an HTML file, ```example.html```, which you can use as an example on how to use the API from within a web page.
+
+### Live Example
+
+https://rqr.w3b.net
